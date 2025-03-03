@@ -36,7 +36,7 @@ A modern web application for creating interactive UIs with draggable text, image
 ```bash
 # Clone repository
 git clone https://github.com/syed-asad-ul-zaman/drag-and-drop-playground.git
-cd drag-drop-playground
+cd drag-and-drop-playground
 
 # Install dependencies
 pnpm install
