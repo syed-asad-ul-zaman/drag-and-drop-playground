@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag-and-Drop Playground</title>
+  <link rel="icon" href="./public/favicon.png" type="image/png">
+  <link rel="stylesheet" href="./src/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script type="module" src="./src/main.js"></script>
+</head>
+
+<body class="bg-gray-100">
+  <div id="app">
+    <div class="flex h-screen">
+      <!-- Left Sidebar -->
+      <div class="w-64 bg-white shadow-lg p-4">
+        <h2 class="text-lg font-semibold mb-4">Elements</h2>
+        <div class="space-y-4">
+          <div class="draggable-element bg-blue-100 p-4 rounded-lg cursor-move hover:bg-blue-200" data-type="text">
+            📝 Text
+          </div>
+          <div class="draggable-element bg-green-100 p-4 rounded-lg cursor-move hover:bg-green-200" data-type="image">
+            🖼️ Image
+          </div>
+          <div class="draggable-element bg-purple-100 p-4 rounded-lg cursor-move hover:bg-purple-200" data-type="shape">
+            ⚪ Shape
+          </div>
+        </div>
+      </div>
+
+      <!-- Playground Area -->
+      <div id="playground" class="flex-1 bg-gray-50 p-8 overflow-auto border-2 border-dashed border-gray-300">
+        <div class="relative min-h-full" id="drop-zone"></div>
+      </div>
+
+      <!-- Properties Panel -->
+      <div class="w-64 bg-white shadow-lg p-4">
+        <h2 class="text-lg font-semibold mb-4">Properties</h2>
+        <div id="properties-panel" class="space-y-4">
+          <p class="text-gray-500">Select an element to edit properties</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
